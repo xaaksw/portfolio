@@ -2,10 +2,10 @@ import { FaWhatsapp, FaLinkedinIn } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 
 const clients = [
-  { name: 'Vodafone', style: 'tracking-widest' },
-  { name: 'CIB',      style: 'tracking-widest' },
-  { name: 'STC',      style: 'tracking-widest' },
-  { name: 'taager',   style: 'tracking-wide' },
+  { name: 'Vodafone', logo: '/logos/vodafone.svg', h: 22 },
+  { name: 'CIB',      logo: '/logos/cib.svg',      h: 20 },
+  { name: 'STC',      logo: '/logos/stc.svg',      h: 20 },
+  { name: 'taager',   logo: '/logos/taager.svg',   h: 18 },
 ]
 
 export default function Hero() {
@@ -30,14 +30,17 @@ export default function Hero() {
           <span className="text-[11px] tracking-[0.08em] uppercase text-[#252525]">
             Worked with
           </span>
-          <div className="flex items-center justify-center gap-8 flex-wrap">
-            {clients.map(({ name, style }) => (
-              <span
+          <div className="flex items-center justify-center gap-10 flex-wrap">
+            {clients.map(({ name, logo, h }) => (
+              <img
                 key={name}
-                className={`text-[12px] font-semibold uppercase text-[#2e2e2e] ${style} transition-colors duration-200 hover:text-[#666666]`}
-              >
-                {name}
-              </span>
+                src={logo}
+                alt={name}
+                height={h}
+                style={{ height: h, width: 'auto', opacity: 0.18, transition: 'opacity 0.2s' }}
+                onMouseEnter={e => e.currentTarget.style.opacity = '0.55'}
+                onMouseLeave={e => e.currentTarget.style.opacity = '0.18'}
+              />
             ))}
           </div>
           <div className="w-full h-px bg-[#141414] mt-1" />
