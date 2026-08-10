@@ -13,11 +13,11 @@ export default function Hero() {
       <div style={{ width: '100%', maxWidth: 940, padding: '0 40px', display: 'flex', flexDirection: 'column' }}>
 
         {/* Header */}
-        <header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '28px 0', fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#5f6664' }}>
-          <span>Ahmed Ashref</span>
-          <span style={{ display: 'flex', alignItems: 'center', gap: 7, color: TEAL }}>
+        <header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '28px 0', fontFamily: "'JetBrains Mono', monospace", letterSpacing: '0.1em', textTransform: 'uppercase', color: '#5f6664' }}>
+          <span style={{ fontSize: 15 }}>Ahmed Ashref</span>
+          <span style={{ display: 'flex', alignItems: 'center', gap: 7, color: TEAL, fontSize: 11 }}>
             <span style={{ width: 5, height: 5, borderRadius: '50%', background: TEAL, flexShrink: 0 }} />
-            Open to senior roles
+            Open for new ideas
           </span>
         </header>
 
@@ -87,9 +87,8 @@ export default function Hero() {
         </section>
 
         {/* Footer */}
-        <footer style={{ marginTop: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid #17181a', padding: '22px 0 40px', fontFamily: "'JetBrains Mono', monospace", fontSize: 10, letterSpacing: '0.06em', color: '#3a3d3f' }}>
+        <footer style={{ marginTop: 'auto', borderTop: '1px solid #17181a', padding: '22px 0 40px', fontFamily: "'JetBrains Mono', monospace", fontSize: 10, letterSpacing: '0.06em', color: '#3a3d3f' }}>
           <span>© 2026 Ahmed Ashref</span>
-          <span>Cairo · GMT+2</span>
         </footer>
 
       </div>
