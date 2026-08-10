@@ -66,6 +66,15 @@ export default function Hero() {
             >
               LinkedIn
             </a>
+            <button
+              data-cal-link="xaaksw"
+              data-cal-origin="https://cal.com"
+              style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13, padding: '14px 22px', borderRadius: 8, border: '1px solid #24262a', color: '#a8aeac', background: 'transparent', cursor: 'pointer', transition: 'border-color 0.15s, color 0.15s' }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = '#3d4045'; e.currentTarget.style.color = '#ededec' }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = '#24262a'; e.currentTarget.style.color = '#a8aeac' }}
+            >
+              Book a call
+            </button>
           </div>
         </main>
 
