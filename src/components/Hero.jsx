@@ -1,90 +1,98 @@
-import { FaWhatsapp, FaLinkedinIn } from 'react-icons/fa'
-import { FaXTwitter } from 'react-icons/fa6'
+const TEAL = 'oklch(0.72 0.11 178)'
 
-const clients = [
-  { name: 'Vodafone', logo: '/logos/vodafone.svg', h: 28 },
-  { name: 'CIB',      logo: '/logos/cib.svg',      h: 24 },
-  { name: 'STC',      logo: '/logos/stc.svg',      h: 24 },
-  { name: 'taager',   logo: '/logos/taager.svg',   h: 22 },
+const logos = [
+  { name: 'Vodafone', src: '/logos/vodafone.svg', h: 26 },
+  { name: 'CIB',      src: '/logos/cib.svg',      h: 24 },
+  { name: 'STC',      src: '/logos/stc.svg',      h: 24 },
+  { name: 'taager',   src: '/logos/taager.svg',   h: 22 },
 ]
 
 export default function Hero() {
   return (
-    <main className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center bg-[#0b0b0b]">
-      <div className="flex flex-col items-center gap-8 w-full max-w-2xl">
+    <div style={{ minHeight: '100vh', background: '#0c0c0d', color: '#ededec', fontFamily: "'Space Grotesk', sans-serif", display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div style={{ width: '100%', maxWidth: 940, padding: '0 40px', display: 'flex', flexDirection: 'column' }}>
 
-        <h1 className="text-6xl md:text-7xl lg:text-8xl font-semibold text-[#f0f0f0] tracking-tight leading-tight">
-          Ahmed Ashref
-        </h1>
-
-        <p className="text-lg md:text-xl text-[#2dd4bf] font-normal -mt-2">
-          Senior Software Engineer · 4+ yrs
-        </p>
-
-        <p className="text-[15px] md:text-[16px] text-[#4a4a4a] leading-[1.8] max-w-md -mt-2">
-          Engineer who thinks in products. I care about the problem as much as the code — building things that feel right and ship.
-        </p>
-
-        {/* Worked with */}
-        <div className="flex flex-col items-center gap-5 w-full">
-          <span className="text-[11px] tracking-[0.1em] uppercase text-[#252525]">
-            Worked with
+        {/* Header */}
+        <header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '28px 0', fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#5f6664' }}>
+          <span>Ahmed Ashref</span>
+          <span style={{ display: 'flex', alignItems: 'center', gap: 7, color: TEAL }}>
+            <span style={{ width: 5, height: 5, borderRadius: '50%', background: TEAL, flexShrink: 0 }} />
+            Open to senior roles
           </span>
-          <div className="flex items-center justify-center gap-12 flex-wrap">
-            {clients.map(({ name, logo, h }) => (
-              <img
-                key={name}
-                src={logo}
-                alt={name}
-                style={{ height: h, width: 'auto', opacity: 0.2, transition: 'opacity 0.2s' }}
-                onMouseEnter={e => e.currentTarget.style.opacity = '0.6'}
-                onMouseLeave={e => e.currentTarget.style.opacity = '0.2'}
-              />
-            ))}
-          </div>
-          <div className="w-full h-px bg-[#141414]" />
-        </div>
+        </header>
 
-        {/* Reach me on */}
-        <div className="flex flex-col items-center gap-4">
-          <span className="text-[11px] tracking-[0.1em] uppercase text-[#2a2a2a]">
-            Reach me on
-          </span>
-          <div className="flex flex-wrap justify-center gap-3">
+        <div style={{ height: 1, background: '#1c1d1f' }} />
+
+        {/* Main */}
+        <main style={{ display: 'flex', flexDirection: 'column', gap: 34, padding: '96px 0 104px' }}>
+          <h1 style={{ margin: 0, fontSize: 'clamp(42px, 7vw, 76px)', fontWeight: 600, letterSpacing: '-0.035em', lineHeight: 1.05 }}>
+            Senior Software<br />
+            Engineer who<br />
+            thinks in <span style={{ color: TEAL }}>products</span>.
+          </h1>
+
+          <p style={{ margin: 0, maxWidth: '52ch', fontSize: 17, lineHeight: 1.8, color: '#8b918f' }}>
+            Engineer who thinks in products. I care about the problem as much as the code — building things that feel right and ship.
+          </p>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap', marginTop: 8 }}>
             <a
               href="https://wa.me/201022644578"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-[13px] text-[#888888] border border-[#222222] rounded-[7px] px-5 py-2.5 transition-all duration-150 hover:border-[#444444] hover:text-[#e0e0e0] hover:bg-white/[0.03]"
+              style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13, padding: '14px 22px', borderRadius: 8, background: TEAL, color: '#08211f', fontWeight: 500, transition: 'opacity 0.15s' }}
+              onMouseEnter={e => e.currentTarget.style.opacity = '0.85'}
+              onMouseLeave={e => e.currentTarget.style.opacity = '1'}
             >
-              <FaWhatsapp size={15} color="#25d366" />
-              WhatsApp
+              WhatsApp me
             </a>
             <a
               href="https://x.com/xaaksw"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-[13px] text-[#888888] border border-[#222222] rounded-[7px] px-5 py-2.5 transition-all duration-150 hover:border-[#444444] hover:text-[#e0e0e0] hover:bg-white/[0.03]"
+              style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13, padding: '14px 22px', borderRadius: 8, border: '1px solid #24262a', color: '#a8aeac', transition: 'border-color 0.15s, color 0.15s' }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = '#3d4045'; e.currentTarget.style.color = '#ededec' }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = '#24262a'; e.currentTarget.style.color = '#a8aeac' }}
             >
-              <FaXTwitter size={14} color="#888888" />
               @xaaksw
             </a>
             <a
               href="https://www.linkedin.com/in/ahmedashrefsw"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-[13px] text-[#888888] border border-[#222222] rounded-[7px] px-5 py-2.5 transition-all duration-150 hover:border-[#444444] hover:text-[#e0e0e0] hover:bg-white/[0.03]"
+              style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13, padding: '14px 22px', borderRadius: 8, border: '1px solid #24262a', color: '#a8aeac', transition: 'border-color 0.15s, color 0.15s' }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = '#3d4045'; e.currentTarget.style.color = '#ededec' }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = '#24262a'; e.currentTarget.style.color = '#a8aeac' }}
             >
-              <FaLinkedinIn size={14} color="#0a66c2" />
               LinkedIn
             </a>
           </div>
-        </div>
-      </div>
+        </main>
 
-      <p className="absolute bottom-8 text-[11px] text-[#202020] tracking-[0.04em]">
-        © 2026 Ahmed Ashref
-      </p>
-    </main>
+        {/* Worked with */}
+        <section style={{ display: 'flex', flexDirection: 'column', gap: 20, paddingBottom: 96 }}>
+          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#4a4f4d' }}>
+            Worked with
+          </span>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', border: '1px solid #17181a', borderRadius: 10, overflow: 'hidden' }}>
+            {logos.map(({ name, src, h }, i) => (
+              <div
+                key={name}
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '32px 0', borderRight: i < logos.length - 1 ? '1px solid #17181a' : 'none' }}
+              >
+                <img src={src} alt={name} style={{ height: h, opacity: 0.3 }} />
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer style={{ marginTop: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid #17181a', padding: '22px 0 40px', fontFamily: "'JetBrains Mono', monospace", fontSize: 10, letterSpacing: '0.06em', color: '#3a3d3f' }}>
+          <span>© 2026 Ahmed Ashref</span>
+          <span>Cairo · GMT+2</span>
+        </footer>
+
+      </div>
+    </div>
   )
 }
