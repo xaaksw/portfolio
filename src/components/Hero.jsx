@@ -1,6 +1,13 @@
 import { FaWhatsapp, FaLinkedinIn } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 
+const clients = [
+  { name: 'Vodafone', style: 'tracking-widest' },
+  { name: 'CIB',      style: 'tracking-widest' },
+  { name: 'STC',      style: 'tracking-widest' },
+  { name: 'taager',   style: 'tracking-wide' },
+]
+
 export default function Hero() {
   return (
     <main className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center bg-[#0b0b0b]">
@@ -11,14 +18,33 @@ export default function Hero() {
         </h1>
 
         <p className="text-[17px] text-[#2dd4bf] font-normal">
-          Software Engineer
+          Senior Software Engineer · 4+ yrs
         </p>
 
         <p className="text-[14.5px] text-[#4a4a4a] leading-[1.75] -mt-1">
           Engineer who thinks in products. I care about the problem as much as the code — building things that feel right and ship.
         </p>
 
-        <div className="flex flex-col items-center gap-3 mt-2">
+        {/* Worked with */}
+        <div className="flex flex-col items-center gap-4 w-full mt-1">
+          <span className="text-[11px] tracking-[0.08em] uppercase text-[#252525]">
+            Worked with
+          </span>
+          <div className="flex items-center justify-center gap-8 flex-wrap">
+            {clients.map(({ name, style }) => (
+              <span
+                key={name}
+                className={`text-[12px] font-semibold uppercase text-[#2e2e2e] ${style} transition-colors duration-200 hover:text-[#666666]`}
+              >
+                {name}
+              </span>
+            ))}
+          </div>
+          <div className="w-full h-px bg-[#141414] mt-1" />
+        </div>
+
+        {/* Reach me on */}
+        <div className="flex flex-col items-center gap-3">
           <span className="text-[11px] tracking-[0.08em] uppercase text-[#2a2a2a]">
             Reach me on
           </span>
