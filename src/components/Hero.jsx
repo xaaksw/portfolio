@@ -47,7 +47,7 @@ export default function Hero() {
               WhatsApp me
             </a>
             <a
-              href="https://ask.xaaksw.com"
+              href="https://www.ask.xaaksw.com"
               target="_blank"
               rel="noopener noreferrer"
               style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13, padding: '14px 22px', borderRadius: 8, background: TEAL, color: '#08211f', fontWeight: 500, transition: 'opacity 0.15s' }}
