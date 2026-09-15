@@ -47,6 +47,16 @@ export default function Hero() {
               WhatsApp me
             </a>
             <a
+              href="https://ask.xaaksw.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13, padding: '14px 22px', borderRadius: 8, background: TEAL, color: '#08211f', fontWeight: 500, transition: 'opacity 0.15s' }}
+              onMouseEnter={e => e.currentTarget.style.opacity = '0.85'}
+              onMouseLeave={e => e.currentTarget.style.opacity = '1'}
+            >
+              Ask Me
+            </a>
+            <a
               href="https://x.com/xaaksw"
               target="_blank"
               rel="noopener noreferrer"
